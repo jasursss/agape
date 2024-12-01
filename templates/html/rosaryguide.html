@@ -1,0 +1,23 @@
+{% extends "html/header.html" %}
+{% load static %}
+
+{% block title %}
+    Rosary Guide
+{% endblock %}
+
+{% block additional_css %}
+<link rel="stylesheet" href="{% static 'css/rosaryguide.css' %}">
+{% endblock %}
+
+
+{% block bodycontents %}
+<div class="main-contents">
+    <h1>How to Pray the Rosary</h1>
+    <p>
+        The purpose of the Rosary is to help keep in memory certain principal events in the history of our salvation.There are twenty mysteries reflected upon in the Rosary, and these are divided into the five <em>Joyful Mysteries(said on Monday and Saturday)</em>, the <em>five Luminous Mysteries (said on Thursday)</em>, the five Sorrowful Mysteries said on Tuesday and Friday), and the <em>five Glorious Mysteries (said on Wednesdav and Sundav)</em>. As an excention the Joyful Mysteries may be said on Sundays during Advent and Christmas, while the Sorrowful Mysteries may be said on the Sundays of Lent.
+
+ The question is sometimes asked, why, of all the incidents in our Lord's life, the Rosary only considers these particular twenty. The mysteries of the Rosary are based on the incidents in the life of Our Lord and His Mother that are celebrated in the Liturgy. There is a parallel between the main feasts honoring our Lord and his Mother in the liturgical year, and when twenty mysteries of the Rosary. Consequently, one who reccites the twenty mysteries of the Rosary in one day reflects on the whole liturgical cycle that the Church commemorates during the course of each year. That is why some of the Popes have referred to the Rosary as a compendium of the Gospel. One cannot change the mysteries of the Rosary without losing the indulgences that the Church grants for the recitation of the Rosary.
+    </p>
+    <a href="{% url 'rosary' %}" class="button">Explore ></a>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+
+body {
+    background-image: url("../images/bibleTriviabg.jpg");
+    background-size: cover;
+    background-position: 50% 14%; 
+    background-repeat: no-repeat;
+}
+
+.main-contents {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background: #991D1D;
+    width: 1331px;
+    height: 700px;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+p{
+    font-family: Century Gothic;
+    font-size: 22px;
+    line-height: 1.6;
+    padding-left: 90px; 
+    padding-right: 90px;
+}
+
+.button {
+    position: absolute; 
+    bottom: 20px; 
+    right: 20px;
+    padding: 10px 20px; 
+    background-color: white; 
+    color: #991D1D;
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s, transform 0.3s; 
+    text-decoration: none;
+}
+
+
+.button:hover {
+    background-color: hwb(3 69% 10%); 
+    transform: scale(1.1); 
+}

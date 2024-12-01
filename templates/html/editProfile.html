@@ -1,0 +1,63 @@
+{% extends "html/header.html" %}
+{% load static %}
+{% block title %} Edit Profile {% endblock %}
+{% block additional_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="{% static 'css/editProfile.css' %}">
+{% endblock %}
+{% block bodycontents %}
+<div class="main-contents">
+    <h1>Edit Profile</h1>
+    <div class="edit-profile-container">
+        <form action="{% url 'editProfile' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <!-- Profile Picture -->
+            <div class="profile-picture-section">
+                <label for="profile-picture">Profile Picture</label>
+                <input type="file" id="profile-picture" name="profile_picture" accept="image/*">
+                <img src="{% static 'images/default-avatar.jpg' %}" alt="Profile Picture" id="current-picture">
+            </div>
+
+            <!-- Editable Fields -->
+            <div class="input-fields">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" placeholder="Enter your first name">
+
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Enter your last name">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter a new password">
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm your password">
+
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="birthdate">Birthdate</label>
+                <input type="date" id="birthdate" name="birthdate">
+
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" placeholder="Enter your country">
+
+                <label for="religion">Religion</label>
+                <input type="text" id="religion" name="religion" placeholder="Enter your religion">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="submit-section">
+                <button type="submit" class="save-btn">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

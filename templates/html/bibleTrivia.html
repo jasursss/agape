@@ -1,0 +1,23 @@
+{% extends "html/header.html" %}
+{% load static %}
+{% block title %} Bible Trivia {% endblock %}
+{% block additional_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="{% static 'css/bibleTrivia.css' %}">
+{% endblock %}
+{% block bodycontents %}
+<div class="main-contents">
+    <h1>Bible Trivia</h1>
+    <div class="trivia-card">
+        <p class="trivia-question" style="display: block;">The Bible is composed of 66 books.</p>
+        <p class="trivia-question" style="display: none;">The Old Testament has 39 books.</p>
+        <p class="trivia-question" style="display: none;">The New Testament has 27 books.</p>
+        <p class="trivia-question" style="display: none;">The Bible was written over approximately 1,500 years.</p>
+        <div class="navigation">
+            <button class="nav-button"><i class="fa-solid fa-angle-left"></i></button> <!-- Previous -->
+            <span class="question-number">1/4</span>
+            <button class="nav-button"><i class="fa-solid fa-angle-right"></i></button> <!-- Next -->
+        </div>
+    </div>
+</div>
+{% endblock %}
